@@ -13,16 +13,16 @@ A few changes were made from the original design.
  * Batch normalization between every layer
  * AdamOptimizer instead of SGD
  
-I used cross entropy with class weights as a loss function, to counter classes imbalance ( much more black pixels than white pixels)
+I used cross entropy with class weights as a loss function, to counter class imbalance ( much more black pixels than white pixels)
 
-The best score this model achieved is a dice cofficient of 0.70115 on the private leaderboard,rank 38/973 (Post deadline),  
+The best score this model achieved is a dice coefficient of 0.70115 on the private leaderboard,rank 38/973 (Post deadline),  
 the competition's winner got 0.73226.
 
 it trained for 55 epochs in about 2 hours and 30 minutes on a Nvidia GTX 960
 
 #How to improve 
  
- * There is a lot of ultrasound with contradictory masks, doing some pre-processing to either eliminate contradictory masks or replace them, could improve performance 
+ * There is a lot of ultrasounds with contradictory masks, doing some pre-processing to either eliminate contradictory masks or replace them, could improve performance 
  * Using bigger size than 128*128 with more features/layers might be better (not enough RAM to test)
  * Some more post-processing to get more realistic masks 
  * Results are a bit inconsistent the score end up being between ~0.695 and ~0.70 , ensembling could prove useful. 
